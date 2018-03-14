@@ -11,3 +11,19 @@ function produceDrivingRange(blockRange) {
     }
   }
 }
+
+function produceTipCalculator(percentage) {
+  return function(fare) {
+    return fare * percentage
+  }
+}
+
+function createDriver(name) {
+  let driverId = 0
+  return class Driver {
+    constructor(name) {
+      this.name = name
+      this.id = ++driverId
+    }
+  }
+}
